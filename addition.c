@@ -1,11 +1,12 @@
 #include <stdio.h>
-int main(){
-	int a, b, c;
-	printf("enter your first number :\n ");
-	scanf("%d", &a);
-	printf("enter the second integer : \n");
-	scanf("%d", &b);
-	c = a + b;
-	printf("the sum of the two integer is : %d \n",c);
+int main()
+{
+	int addend1, addend2, sum;
+	printf("Please enter the first number:\n");
+	scanf("%d", &addend1);
+	printf("Please enter the second number:\n");
+	scanf("%d", &addend2);
+	sum = addend1 + addend2;
+	printf("The sum of the two integer is : %d\n", sum);
 	return 0;
 }

@@ -1,5 +1,15 @@
 #include <stdio.h>
 
+int matrix(int m, int i, int j, int array1[][m], int array2[][j])
+{
+    int product = 0;
+    for (int k = 0; k < m; k++)
+    {
+        product = product + (array1[i][k] * array2[k][j]);
+    }
+    return (product);
+}
+
 int main()
 {
     int n, m, q, a, b;
@@ -20,6 +30,7 @@ int main()
         scanf("%d%d", &m, &q);
         b = m;
     }
+
     int array1[n][m];
     int array2[m][q];
 
@@ -45,12 +56,7 @@ int main()
     {
         for (int j = 0; j < q; j++)
         {
-            int term = 0;
-            for (int k = 0; k < m; k++)
-            {
-                term = term + (array1[i][k] * array2[k][j]);
-            }
-            printf("%d ", term);
+            printf("%d ", matrix(m, i, j, array1, array2));
         }
         printf("\n");
     }
